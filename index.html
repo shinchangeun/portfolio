@@ -6,7 +6,7 @@
     <title>My Portfolio</title>
     <meta name="author" content="shinchangeun">
     <meta name="description" content="짱못먹고 짱구됨">
-    <link rel="icon"  type="image/png" href="img/logo.png" >
+    <link rel="icon"  type="image/png" href="img/favicon.png" >
     <!-- stylesheet는 css등록할때,icon -->
     <script src="https://kit.fontawesome.com/939ba41449.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -15,8 +15,8 @@
     <!-- Navbar 시작 -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fa-solid fa-ghost"></i>
-            <a href="#">sce</a>
+            <i class="fa-solid fa-icons"></i>
+            <a href="#" >sce</a>
         </div>
         <ul class="navbar__menu">
             <li class="navbar__menu__item active">홈</li>
@@ -38,9 +38,9 @@
     <!-- Home 시작 -->
         <section id="home">
             <div class="home__container">
-                <img src="./img/img.JPEG" alt="양갈래 증명사진" class="home_avatar">
-                <h1 class="hone_title">Hello!신창은입니다</h1>
-                <h2 class="home__description">영등포에 거주중입니다</h2>
+                <img src="./img/img1.jpeg" alt="증명사진" class="home__avatar">
+                <h1 class="hone__title">Hello! 신창은입니다</h1>
+                <h2 class="home__description">✨IT잘알이 되는 그 날까지 화이팅✨</h2>
                 <button class="home__contact"> 연락주세요!</button>
             </div>
         </section>
@@ -51,43 +51,45 @@
     <section id="about" class="section section__container">
         <h1>내 소개</h1>
         <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellendus sed cupiditate voluptatibus exercitationem quaerat atque laborum iure fugiat, repellat eius id minima accusantium labore ipsum. Minus iure dignissimos nemo.
+        소개는 아직 채울 말이 없지만 앞으로 열심히 해서 채워나가겠습니다! 감사합니다 :-)
         </p>
         <div class="about__majors">
             <div class="major">
-                <div class="major_icon">
+                <div class="major__icon">
                     <i class="fa-sharp fa-solid fa-code"></i>
                 </div>
                 <h2 class="major__title">프론트엔드</h2>
                 <div class="major__description"> HTML,CSS,JavaScript,TypeScript</div>
             </div>
             <div class="major">
-                <div class="major_icon">
+                <div class="major__icon">
                     <i class="fa-solid fa-server"></i>
                 </div>
                 <h2 class="major__title">백엔드</h2>
-                <div class="major__description">Javascript,Java,NodeJS,c#,Spring</div>
+                <div class="major__description">JavaScript,Java,NodeJS,C#,Spring</div>
             </div>
             <div class="major">
-                <div class="major_icon">
+                <div class="major__icon">
                     <i class="fa-solid fa-mobile-screen-button"></i>
                 </div>
                 <h2 class="major__title">모바일</h2>
                 <div class="major__description"> Android,IOS,React Native,Flutter,Kotlin</div>
             </div>
         </div>
+        <br>
         <div class="about__jobs">
             <div class="job">
-                <img src="/img/job_logo.png" alt="회사 로고">
+                <img src="./img/job_logo.png" alt="회사 로고">
                 <div class="job__description">
-                <p class="job__name">
-                    웹 에이전시 디자이너
-                </p>
-                <p class="job__period">
-                    2021.03.21~2022.05.31
-                </p>
+                    <br>
+                    <p class="job__name">
+                        웹 에이전시 디자이너
+                    </p>
+                    <p class="job__period">
+                        2021.03.21~2022.05.31
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
     <!-- 내 소개 끝 -->
@@ -99,18 +101,19 @@
             <h1>기술</h1>
             <h2>소개</h2>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique enim explicabo ratione quo perferendis ex, nisi repellendus nobis in error ullam cupiditate quaerat nihil quis porro ipsum suscipit, laudantium possimus?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Similique enim explicabo ratione quo perferendis ex.
             </p>
+            <br>
             <div class="skillset">
                 <div class="skillset__left">
-                    <h3 class="skillset_title">language</h3>
+                    <h3 class="skillset__title">language</h3>
                     <div class="skill">
                         <div class="skill__description">
                             <span>HTML</span>
                             <span>100%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill_value"></div>
+                            <div class="skill__value" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="skill">
@@ -119,7 +122,7 @@
                             <span>90%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill_value"></div>
+                            <div class="skill__value" style="width: 90%;"></div>
                         </div>
                     </div>   
                     <div class="skill">
@@ -128,7 +131,7 @@
                             <span>80%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill_value"></div>
+                            <div class="skill__value" style="width: 80%;"></div>
                         </div>
                     </div>   
                     <div class="skill">
@@ -137,7 +140,7 @@
                             <span>50%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill_value"></div>
+                            <div class="skill__value" style="width: 50%;"></div>
                         </div>
                     </div>   
                     <div class="skill">
@@ -146,7 +149,7 @@
                             <span>10%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill_value"></div>
+                            <div class="skill__value" style="width: 10%;"></div>
                         </div>
                     </div>   
                     <div class="skill">
@@ -155,14 +158,15 @@
                             <span>80%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill_value"></div>
+                            <div class="skill__value" style="width: 80%;"></div>
                         </div>
                     </div>
                 </div>
+
                 <div class="skillset__right">
                     <div class="tools">
-                        <h3 class="skillset_title">Tools</h3>
-                        <ul class="tools_list">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
                             <li><span>VS code</span></li>
                             <li><span>InteliJ</span></li>
                             <li><span>Android Studio</span></li>
@@ -172,7 +176,7 @@
                     </div>
                     <div class="etc">
                         <h3 class="skillset__title">Etc</h3>
-                        <ul class="etc_list">
+                        <ul class="etc__list">
                             <li><span>Math</span></li>
                             <li><span>Run</span></li>
                             <li><span>Music</span></li>
@@ -205,7 +209,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>유튜브 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -214,7 +218,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>배달의 민족 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -223,7 +227,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>에어비앤비 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -232,7 +236,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>마켓컬리 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -241,7 +245,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>진에어 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -250,7 +254,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>쿠팡 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -259,7 +263,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>여기어때 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -268,7 +272,7 @@
             </div>
             <div class="work__projects">
                 <a href="" class="project" target="blank">
-                    <img src="/img/youtube1.jpeg" alt="" class="project__img"> 
+                    <img src="./img/youtube1.jpeg" alt="" class="project__img"> 
                     <div class="project__description">
                         <h3>야놀자 클론코딩</h3>
                         <span>Clone coding 아주 똑같음</span>
@@ -288,7 +292,7 @@
             <h3>이분들은 저를 보고 짱구라 했어요!</h3>
             <div class="testimonials">
                 <div class="testimonial">
-                    <img src="/img/people.jpeg" alt="" class="testimonial_avatar">
+                    <img src="./img/people.jpeg" alt="" class="testimonial_avatar">
                     <div class="testimonial__speech-bubble">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, voluptates dolore. Enim adipisci voluptas perferendis molestias eaque, voluptates tenetur eum eveniet nihil autem, aspernatur ducimus provident totam, error animi aut?
@@ -297,7 +301,7 @@
                     </div>
                 </div>
                 <div class="testimonial">
-                    <img src="/img/people.jpeg" alt="" class="testimonial_avatar">
+                    <img src="./img/people.jpeg" alt="" class="testimonial__avatar">
                     <div class="testimonial__speech-bubble">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, voluptates dolore. Enim adipisci voluptas perferendis molestias eaque, voluptates tenetur eum eveniet nihil autem, aspernatur ducimus provident totam, error animi aut?
