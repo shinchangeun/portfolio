@@ -20,6 +20,9 @@
     --color-grey : rgb(84, 83, 83);
     --color-green2 : rgb(172, 209, 127);
     --color-orange:rgb(245,183,88);
+    --color-pastel_green: rgb(228, 236, 223);
+    --color-deeppink:  rgb(203, 49, 108);
+    --color-pastel_blue : rgb(219, 217, 217);
 
     --font-large: 48px;
     --font-medium: 28px;
@@ -86,14 +89,29 @@
     }
 
     /* Navbar */
+    /* 네비바 고정시킴 */
     #navbar{
+        position: fixed;
+        /* 크기가 줄어듬 */
+        width: 100%;
         display: flex;
         justify-content:space-between ;
         align-items: center;
         padding: 16px;
         background-color: var(--color-green);
+        z-index: 1;
+        /* 고정되게 */
+        transition: all var(--animation-duration) ease-in-out;
+        /* 부드럽게 */
     }
 
+    /* 11/16 추가 */
+    #navbar.navbar--bold{
+        background-color: var(--color-deeppink);
+        padding: 10px;
+    }
+    /* -- */
+    
     .navbar__logo{
         font-size: var(--font-medium);
         font-weight: bold;
@@ -106,39 +124,46 @@
 
     .navbar__menu{
         display: flex;
+        /* margin: 0 */
     }
 
+    
     .navbar__menu__item{
         padding: 8px 12px;
         margin: 0 4px;
         color: var(--color-white);
         cursor: pointer;
+         /* 11/16 추가 */
+        border: 1px solid transparent;
+        border-radius: var(--size-border-radius);
     }
 
     .navbar__menu__item.active{
         border: 1px solid white;
         border-radius: var(--size-border-radius);
+        
     }
 
     .navbar__menu__item:hover{
-        /* background-color: var(--color-pink); */
-        color: var(--color-pink);
-        border-radius: var(--size-border-radius);
+        border-color: var(--color-pastel_green);
+        /* background-color: var(--color-orange); */
+        
     }
 
     .navbar__toggle-btn{
         position: absolute;
-        top: 24px;
+        top: 20px;
         right: 32px;
         font-size: 24px ;
-        color: var(--color-white);
+        color: var(--color-green);
         display: none;
+        background-color: var(--color-white);
     }
-
+    
     /* 홈 */
     #home{
         /* background: url(/img/bg2.png) center/cover no-repeat; */
-        padding: 40px;
+        padding: 160px;
         text-align: center;
     }
 
@@ -162,9 +187,15 @@
         border-radius: var(--size-border-radius);
     }
 
+    /* 11/16 추가 */
+    .home__contact:hover{
+        background-color: var(--color-green2);
+    }
+
+
     /* section 공통 */
     .section{
-        padding: 50px;
+        padding: 100px;
         text-align: center;
         margin: auto;
     }
@@ -231,7 +262,6 @@
         font-size: var(--font-micro);
     }
 
-
 /* 회사 로고 이미지 줄일꺼면 class 줘서 줄이기 */
 
 /* 기술 */
@@ -287,39 +317,49 @@
 }
 
 .etc{
-    padding:20px ;
+    padding:40px ;
+    text-align: center;
 }
 
 /* 내 작업실 */
+
+/* .abc{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} */
 .work__categories{
     margin: 40px;
 }
 
 .category__btn{
-    border: 1px solid var(--color-grey);
+    /* border: 1px solid var(--color-grey); */
     border-radius:var(--size-border-radius) ;
     font-size: var(--font-regular);
     padding: 8px 48px; 
-    color: var(--color-white);  
+    color: var(--color-white); 
+    background-color: var(--color-green); 
+    width: 250px;
+    margin: 10px;
 }
 
 
-.category__btn.active , .category__btn:hover {
-    background-color: var(--color-pink);
-    color: var(--color-white);
+.category__btn.selected , 
+.category__btn:hover {
+    background-color: var(--color-grey);
 }
 
 
-.category__btn.active .category__count ,
+.category__btn.selected .category__count ,
 .category__btn:hover .category__count  {
     opacity: 1;
     top:0;
 }
 
 .category__count {
-    background-color: var(--color-green2);
+    background-color: var(--color-white);
     border-radius: 50%;
-    color: var(--color-white);
+    color: var(--color-black);
     width: 24px;
     height: 24px;
     line-height: 24px;
@@ -338,6 +378,18 @@
     justify-content: center;
 }
 
+/* 11/16 추가 */
+.work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translate(40px);
+}
+.project.invisible {
+    display: none;
+}
+/* -- */
+
+
+
 .project{
     position: relative;
     display: flex;
@@ -346,7 +398,7 @@
     width: 280px;
     height: 250px;
     margin: 2px;
-    background-color: var(--color-green2);
+    background-color: var(--color-pastel_green);
 }
 
 
@@ -403,7 +455,7 @@
 /* 추천서 */
 
 #testimonials{
-    background-color: var(--color-pink);
+    background-color: var(--color-green2); 
 }
 
 .testimonials{
@@ -429,22 +481,25 @@
 }
 
 .testimonial__speech-bubble{
-    padding: 18px;
+    padding: 28px;
     background-color: var(--color-grey);
     border-radius: var(--size-border-radius);
 }
 
 
 .testimonial__speech-bubble p {
-    background-color: var(--color-green);
+    background-color: var(--color-grey);
+    color: var(--color-white);
 }
 
 .testimonial__speech-bubble a {
-    background-color: var(--color-green2);
+    /* background-color: var(--color-green2); */
+    color: var(--color-green2);
+    text-decoration: none;
 }
 
 #contact{
-    background-color: var(--color-orange);
+    background-color: var(--color-pastel_blue);
 }
 .contact__title , .contact__email , .contact__rights{
     color: var(--color-black);
@@ -466,6 +521,31 @@
 }
 
 
+/* 11/16 추가 */
+/* 위로 가는 버튼  */
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 27px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: var(--color-white);
+    background-color: var(--color-green);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in ;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
 
 /* 사이즈 줄였을때 */
 @media screen and (max-width:768px){
@@ -484,6 +564,14 @@
         width: 100%;
         display: none;
     }
+    
+    /* 11/16 추가 */
+    /* 토글 */
+    .navbar__menu.open {
+        display: block;
+        /* 메뉴가 밑으로 떨어짐 */
+    }
+    /* -- */
 
     .about__majors{
         flex-direction: column;
